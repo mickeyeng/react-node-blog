@@ -1,9 +1,12 @@
 import React from 'react'
 
 
-const ArticlePage = () => {
+const ArticlePage = ({ match }) => {
+  const name = match.params.name
   return (
-    <h1>Article Page</h1>
+    <>
+      <h1>This is the {name} article</h1>
+    </>
   )
 }
 
