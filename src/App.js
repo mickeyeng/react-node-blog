@@ -6,21 +6,22 @@ import Navbar from './components/Navbar';
 import AboutPage from './pages/AboutPage';
 import ArticlesList from './pages/ArticlesList';
 import ArticlePage from './pages/ArticlePage';
+import StyledPageWrapper from './styles/StyledPageWrapper';
 
 
 function App() {
   return (
     <Router>
       <GlobalStyles />
-      <div id="page-wrapper">
+      <Navbar />
+      <StyledPageWrapper>
         <div className="App">
-          <Navbar />
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/articles-list" component={ArticlesList} />
           <Route path="/article" component={ArticlePage} />
         </div>
-      </div>
+      </StyledPageWrapper>
     </Router>
   );
 }

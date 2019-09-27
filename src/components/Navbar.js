@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import StyledNavbar from '../styles/StyledNavbar';
 
 
 const Navbar = () => {
   return (
-    <nav>
+    <StyledNavbar>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -16,7 +17,7 @@ const Navbar = () => {
           <Link to="/articles-list">Articles</Link>
         </li>
       </ul>
-    </nav>
+    </StyledNavbar>
   )
 }
 

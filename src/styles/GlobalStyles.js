@@ -13,12 +13,17 @@ const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    position: relative;
-    height: 100vh;
-    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
+  }
 
+  p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 
 `
