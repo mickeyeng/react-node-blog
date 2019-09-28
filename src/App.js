@@ -4,9 +4,9 @@ import GlobalStyles from './styles/GlobalStyles';
 import HomePage from './pages/HomPage';
 import Navbar from './components/Navbar';
 import AboutPage from './pages/AboutPage';
-import ArticlesList from './pages/ArticlesList';
 import ArticlePage from './pages/ArticlePage';
 import StyledPageWrapper from './styles/StyledPageWrapper';
+import ArticlesListPage from './pages/ArticlesListPage';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <div className="App">
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
-          <Route path="/articles-list" component={ArticlesList} />
+          <Route path="/articles-list" component={ArticlesListPage} />
           <Route path="/article/:name" component={ArticlePage} />
         </div>
       </StyledPageWrapper>

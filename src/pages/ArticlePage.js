@@ -1,5 +1,6 @@
 import React from 'react';
 import ArticleContent from './Article-content';
+import ArticlesList from '../components/ArticlesList';
 
 
 const ArticlePage = ({ match }) => {
@@ -8,10 +9,12 @@ const ArticlePage = ({ match }) => {
 
   if (!article) return <h1>Article does not exist</h1>;
 
+  const otherArticles = ArticleContent.filter((article) => article.name !== name);
+
   return (
     <>
       <h1>{article.title}</h1>
-      {article.content.map((paragraph, key) => <p key={key}>{paragraph}</p>)}
+      <ArticlesList articles={otherArticles} />
     </>
   )
 }
