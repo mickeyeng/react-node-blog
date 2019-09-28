@@ -1,6 +1,8 @@
 import React from 'react';
 import ArticleContent from './Article-content';
 import ArticlesList from '../components/ArticlesList';
+import StyledArticlePage from '../styles/StyledArticlePage'
+import StyledArticlesList from '../styles/StyledArticlesList';
 
 
 const ArticlePage = ({ match }) => {
@@ -12,10 +14,18 @@ const ArticlePage = ({ match }) => {
   const otherArticles = ArticleContent.filter((article) => article.name !== name);
 
   return (
-    <>
+    <StyledArticlePage>
       <h1>{article.title}</h1>
-      <ArticlesList articles={otherArticles} />
-    </>
+      {article.content.map((paragraph, key) => {
+        return (
+          <p key={key}>{paragraph}</p>
+        )
+      })}
+      <h1>Recent Articles</h1>
+      <StyledArticlesList>
+        <ArticlesList articles={otherArticles} />
+      </StyledArticlesList>
+    </StyledArticlePage>
   )
 }
 
